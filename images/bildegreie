@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function writeText(txt)
+            {
+                document.getElementById("desc").innerHTML=txt;
+            }
+            function showLeg()
+            {
+                document.getElementById("bilde").src="paint.jpg"
+                
+            }
+            function showArm()
+            {
+                document.getElementById("bilde").src="arm.jpg"
+                
+            }
+            function showBryst()
+            {
+                document.getElementById("bilde").src="bryst.jpg"
+                
+            }
+            function showMage()
+            {
+                document.getElementById("bilde").src="mage.jpg"
+                
+            }
+            function showLeg2()
+            {
+                document.getElementById("bilde").src="leg2.jpg"
+            }
+            function showArm2()
+            {
+                document.getElementById("bilde").src="arm2.jpg"
+            }
+        </script>
+        <style>
+            #desc {float:right}
+            body {width:1000px}
+        </style>
+    </head>
+    <body>
+        <img src ="vinci.jpg" width ="440" height ="600" alt="Planets" usemap="#planetmap" id="bilde"/>
+
+        <map name="planetmap">
+            <area shape ="rect" coords ="245,130,370,200"
+                onmouseover="writeText('Dette er en arm.'), showArm()"
+                href ="sun.htm" target ="_blank" alt="Sun" />
+
+            <area shape ="rect" coords ="180,180,260,230"
+                onmouseover="writeText('Dette er en brystkasse.'), showBryst()"
+                href ="mercur.htm" target ="_blank" alt="Mercury" />
+
+            <area shape ="rect" coords ="180,230,260,280"
+                onmouseover="writeText('Dette er en mage.'), showMage()"
+                href ="venus.htm" target ="_blank" alt="Venus" />
+
+            <area shape ="rect" coords ="220,290,320,430"
+                onmouseover="writeText ('Dette er et bein'), showLeg()"
+                href ="venus.htm" target ="_blank" alt="Venus" />
+
+            <area shape="rect" coords="130,290,220,430"
+                  onmouseover="writeText ('Dette er et bein'), showLeg2()"
+                  href="blabla.html" target="_blank" alt="bein2"/>
+            
+            <area shape="rect" coords="70,130,200,200"
+                  onmouseover="writeText ('Dette er en arm'), showArm2()"
+                  href="blabla.html" target="_blank" alt="arm2"/>
+        
+        </map>
+
+        <p id="desc">Mouse over the sun and the planets and see the different descriptions.</p>
+
+    </body>
+</html>
